@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.slick-arrow-container {
+    .slick-next, .slick-prev {
+        height: unset;
+        width: unset;
+        border-radius: 100%;
+        font-size: 4rem;
+        background-color: rgba(0,0,0,.25);
+        z-index: 200;
+        color: white;
+        height: 50px;
+        width: 50px;           
+        transition: .2s ease-in-out;
+
+        &:hover{
+            background-color: rgba(0,0,0,.45);
+        }
+    }
+    .slick-next{
+        margin-right: 26px;
+    }
+    .slick-prev{
+        margin-left: 26px;
+    }
+
+}

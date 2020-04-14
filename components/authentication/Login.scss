@@ -1,0 +1,113 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.login {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh);
+  width: 100%;
+  background: $purple;
+  .form-container {
+    width: 450px;
+    margin: 0 auto;
+    background-color: $white;
+    padding: 30px;
+    border-radius: 5px;
+    height: 360px;
+    margin-top: 60px;
+    -webkit-box-shadow: 2px 2px 11px -2px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: 2px 2px 11px -2px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 2px 11px -2px rgba(0, 0, 0, 0.47);
+
+    .form__message {
+      margin: 0 auto;
+      width: 87%;
+      font-size: 1.7rem;
+      margin-bottom: 25px;
+      padding-left: 5px;
+
+      span {
+        button {
+          padding: 1px 0px;
+          background-color: white;
+          border-radius: 5px;
+          border: none;
+          color: $purple;
+          font-size: 1.9rem;
+          font-weight: 500;
+          text-decoration: underline;
+        }
+      }
+    }
+    .form {
+      text-align: center;
+      margin: 0 auto;
+
+      .form__field {
+        width: 85%;
+        margin: 0 auto;
+      }
+
+      .form__field--input {
+        width: calc(100% - 16px);
+        height: 45px;
+        background-color: $background;
+        padding: 0px 8px;
+        margin: 7px 0px;
+        border: none;
+        font-family: "sofia-pro";
+        font-weight: 300;
+      }
+      .name {
+        display: flex;
+        width: 87%;
+        margin: 0 auto;
+
+        .firstLast {
+          width: 48%;
+        }
+      }
+
+      input::placeholder {
+        padding: 1px;
+        font-family: "sofia-pro";
+        color: gray;
+        font-weight: 200;
+      }
+      button {
+        width: 85%;
+        height: 55px;
+        background-color: $orange;
+        color: $white;
+        font-size: 2.4rem;
+        border: none;
+        border-radius: 5px;
+        margin: 20px 0px;
+        font-family: "sofia-pro";
+      }
+    }
+    p {
+      margin: 10px 0px 20px 0px;
+    }
+    .Google {
+      width: 330px;
+      height: 55px;
+      background-color: $white;
+      color: black;
+      font-size: 2.4rem;
+      border: gray 1px solid;
+      border-radius: 5px;
+      margin: 10px 0px;
+    }
+    .Facebook {
+      width: 330px;
+      height: 55px;
+      background-color: #3b5998;
+      color: $white;
+      font-size: 2.4rem;
+      border: none;
+      border-radius: 5px;
+      margin: 10px 0px;
+    }
+  }
+}

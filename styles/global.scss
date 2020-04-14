@@ -1,0 +1,194 @@
+::selection {
+  background: $orange;
+  color: $snow-white;
+  overflow: hidden;
+}
+
+html {
+    font-size: 62.5%;
+    background: $background;
+    
+  }
+  button{
+    font-family: "sofia-pro";
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 300;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  body {
+    font-family: "sofia-pro", "sans-serif";
+    button:focus {
+      outline: none;
+    }
+  }
+  
+  a {
+    font-family: "sofia-pro", "sans-serif";
+    text-decoration: none;
+    font-size: 2.2rem;
+    color: inherit;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  i {
+    font-style: italic;
+  }
+  
+  p {
+    font-family: "sofia-pro", "sans-serif";
+    font-size: 1.8rem;
+  }
+  
+  b {
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-family: "sofia-pro", "sans-serif";
+    // font-weight: bold;
+    font-size: 4.8rem;
+  }
+  
+  h2 {
+    font-family: "sofia-pro", "sans-serif";
+    // font-weight: bold;
+    font-size: 3.8rem;
+  }
+  
+  h3 {
+    font-family: "sofia-pro", "sans-serif";
+    // font-weight: bold;
+    font-size: 2.4rem;
+  }
+  
+  h4 {
+    font-family: "sofia-pro", "sans-serif";
+    // font-weight: bold;
+    font-size: 2.2rem;
+  }
+  
+  h5 {
+    font-family: "sofia-pro", "sans-serif";
+    // font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  h6 {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  
+  input {
+    font-family: "sofia-pro";
+    font-size: 1.6rem;
+    padding: 10px 15px;
+    outline: none;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+
+    &::placeholder{
+      font-family: "sofia-pro";
+      font-size: 1.6rem;
+    }
+  }
+  
+  textarea {
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    padding: 10px 15px;
+    margin: 10px 0 0;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid $mirage;
+  }
+  
+  select {
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    border-radius: 5px;
+    border: 1px solid $mirage;
+  }
+  
+  hr {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    border: none;
+    border-top-color: $silver-lining;
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+  
+  .display-none {
+    display: none;
+  }
+  
+  .react-toggle-track {
+    background-color: $dark-purple;
+  }
+  
+  .tab {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  a svg {
+    &:hover {
+      color: lighten($purple, 20%);
+    }
+    &:focus,
+    &:active {
+      color: darken($purple, 20%);
+    }
+  }
+  
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+  li{
+      text-decoration: none;
+  }
+
+  .dropzone{
+    outline:none;
+  }
+
+//   .slick-dots{
+//     z-index: 400;
+//     color: white;
+//     bottom: 20%!important;
+//     left: 40%;
+// }
+// .slick-dots li{
+//   font-size: 20px;
+//   line-height: 20px;
+// }
+
+// .slick-dots li button:before
+// {
+//     font-family: 'slick';
+//     font-size: 20px;
+//     line-height: 20px;
+// }
+
+.sortableHelper{
+  border-radius: 6px!important;
+  object-fit: cover!important;
+  -webkit-box-shadow: 2px 2px 11px -2px rgba(0, 0, 0, 0.47);
+  -moz-box-shadow: 2px 2px 11px -2px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 2px 11px -2px rgba(0, 0, 0, 0.47);
+  width: 100%;
+  height: 100%;
+z-index: -10}
+

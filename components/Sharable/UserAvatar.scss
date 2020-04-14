@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.user-avatar {
+    border-radius: 50%;
+    z-index:1;
+    &:hover {
+      cursor: pointer;
+    }
+
+    .user-avatar-image{
+
+       width: 100%!important;
+       height: 100%!important;
+        border-radius: 50%;
+    }
+  }

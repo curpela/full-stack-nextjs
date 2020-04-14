@@ -1,0 +1,258 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+
+
+.post-modal {
+
+  border-radius: 9px;
+  background: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  top: 17%;
+  left: 13%;
+  width: 74%;
+  min-width: 900px;
+  z-index: 200;
+
+
+  .post-modal-left {
+      width: 63%;
+
+ 
+.post-modal-image-container{
+    height: 65vh;
+    
+    .post-modal-slider{
+
+      div{
+    .post-modal-image {
+        border-top-left-radius: 9px;
+        border-bottom-left-radius: 9px;
+
+      width: 100%;
+      min-height: 400px;
+      height: 100%;
+      object-fit: cover;
+      line-height: 100%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  }
+}
+
+  }
+
+  .post-modal-right {
+    width: 35%;
+
+    .post-modal-content {
+        background: white;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+  
+        .post-modal-title {
+          display: flex;
+          margin-left: 10px;
+          text-align:left;
+  
+          &:hover {
+            cursor: pointer;
+          }
+  
+          .post-modal-user-avatar {
+            min-width: 50px;
+            min-height: 50px;
+            border-radius: 50px;
+            background: black;
+            margin: 20px 15px 20px 20px;
+  
+            &:hover {
+              cursor: pointer;
+            }
+          }
+  
+          .post-modal-credentials {
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+  
+            .post-modal-user-name {
+              font-weight: 500;
+              text-align:left;
+            }
+            .post-modal-time {
+              color: rgb(177, 177, 177);
+              font-weight: 300;
+              text-align:left;
+            }
+          }
+        
+        .post-modal-footer {
+            .post-modal-attributes {
+              display: flex;
+              margin-left: 20px;
+      
+              .post-modal-likes {
+                display: flex;
+      
+                .post-modal-like-icon {
+                  width: 40px;
+                  height: 40px;
+                  margin: 10px 5px 10px 9px;
+                  padding-bottom: 5px;
+                  color: red;
+                  opacity: 0.8;
+      
+                  &:hover {
+                    cursor: pointer;
+                  }
+                }
+                .post-modal-number-of-likes {
+                  margin: 17px 25px 10px 2px;
+                  font-weight: 500;
+                  font-family: "sofia-pro";
+                  font-size: 1.9rem;
+                  color: rgba(0, 0, 0, 0.75);
+                }
+              }
+            }
+            .post-modal-comments {
+              display: flex;
+      
+              .post-modal-comments-icon {
+                width: 38px;
+                height: 38px;
+                margin: 10px 6px 10px 15px;
+                padding-bottom: 5px;
+                color: $orange;
+                opacity: 0.8;
+      
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+              .post-modal-number-of-comments {
+                margin: 17px 25px 10px 5px;
+                font-weight: 500;
+                font-family: "sofia-pro";
+                font-size: 1.9rem;
+                color: rgba(0, 0, 0, 0.75);
+              }
+            }
+          }
+        }
+        .post-modal-word-content {
+          color: rgb(75, 75, 75);
+          font-weight: 300;
+          margin: 15px 35px 15px 35px;
+          line-height: 1.6;
+          font-size: 1.6rem;
+          text-align: left;
+        }
+      }
+      
+    .post-modal-comment-section {
+      display: flex;
+      padding: 15px;
+      margin-top: 15px;
+      align-items: center;
+      margin-bottom: 10px;
+position: absolute;
+bottom: 10%;      // justify-content: space-between;
+
+      .post-modal-comment-author-avatar {
+        width: 35px;
+        min-width: 35px;
+        height: 35px;
+        border-radius: 22.5px;
+        background: black;
+        margin-left: 12px;
+        margin-right: 10px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .post-modal-comment-author {
+        font-weight: 500;
+        color: black;
+        font-size: 1.6rem;
+        margin-right: 15px;
+        padding-left:10px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .post-modal-comment {
+        display: flex;
+        align-items: center;
+
+        .post-modal-comment-content {
+          font-weight: 300;
+          color: gray;
+          padding-right: 15px;
+          padding-left: 10px;
+          font-size: 1.2rem;
+          text-align: left;
+        }
+
+        .post-modal-comment-reply {
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: rgb(58, 58, 58);
+          margin-bottom: 10px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .post-modal-comment-heart {
+          height: 23px;
+          width: 23px;
+          color: black;
+          margin-left: 15px;
+          margin-bottom: 8px;
+          margin-right: 20px;
+          color: red;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .post-modal-comment-input {
+      position: absolute;
+      width: calc(35% - 50px);
+      margin-left: 10px;
+      border: none;
+      bottom: 10px;
+      right: 20px;
+      padding: 5px 15px;
+      border-bottom-left-radius: 8px !important;
+      border-bottom-right-radius: 8px !important;
+      border-radius: 5px;
+      overflow: hidden;
+      border-top: 1px solid rgba(114, 114, 114, 0.22);
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
+      font-family: "sofia-pro";
+      color: rgb(65, 65, 65);
+      font-weight: 300;
+      // margin-top: 60px;
+    }
+    input::placeholder {
+      padding: 1px;
+      font-family: "sofia-pro";
+      color: gray;
+      font-weight: 200;
+    }
+  }
+}

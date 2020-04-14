@@ -1,0 +1,87 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.landing-page-container {
+    width: 100%;
+    background: $purple;
+    background-image: url(/static/LandingBackground.jpg);
+    background-size: cover;
+    height: 560px;
+    display: flex;
+    // align-items: center;
+    overflow: hidden;
+
+    .landing-page-header {
+      margin: 105px auto 0px 10%;
+      border-radius: 8px;
+
+      .landing-page-header-welcome-message {
+        margin: 0 auto;
+
+        h1 {
+          color: white;
+          font-family: "sofia-pro";
+          margin-bottom: 15px;
+          font-size: 3.4rem;
+          font-weight: 600;
+        }
+        .landing-page-header-explainer {
+          margin: 0px auto 25px auto;
+          font-size: 1.5rem;
+          font-weight: 300;
+          line-height: 1.1;
+          color: white;
+          overflow-wrap: normal;
+        }
+      }
+
+      .landing-page-header-address-form {
+        display: flex;
+        margin: 0 auto;
+        .landing-page-address-input {
+          width: 350px;
+          font-family: "sofia-pro";
+          font-size: 1.5rem;
+          font-weight: 300;
+          border: none;
+          border-radius: 0px;
+          -webkit-box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.47);
+          -moz-box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.47);
+          box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.47);
+          height: 25px;
+
+          &::placeholder {
+            font-family: "sofia-pro";
+            font-size: 1.5rem;
+            font-weight: 200;
+          }
+        }
+        .landing-page-header-address-submit-button {
+          background: $orange;
+          color: white;
+          width: 50px;
+          padding: 10px 4px;
+          height: 45px;
+          font-size: 1.6rem;
+          border-radius: 0px;
+          -webkit-box-shadow: 1px 1px 8px -1px rgba(0, 0, 0, 0.17);
+          -moz-box-shadow: 1px 1px 8px -1px rgba(0, 0, 0, 0.17);
+          box-shadow: 1px 1px 8px -1px rgba(0, 0, 0, 0.17);
+        }
+      }
+    }
+    .landing-page-header-image-container {
+      width: 45%;
+      margin: 20px 11% 0px 35px;
+
+      .landing-page-header-image {
+        margin-left: 80px;
+        width: 94%;
+        height: 28.5vw;
+        max-width: 540px;
+        max-height: 435px;
+        min-width: 440px;
+        min-height: 350px;
+      }
+    }
+  }

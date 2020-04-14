@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.main-button {
+ 
+    padding: 10px 8px;
+    background-color: $purple;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: $snow-white;
+    transition: .2s ease-in-out;
+    margin: 5px auto;
+    border-radius: 5px;
+    
+    &:hover {
+      background-color: darken($purple, 10%);
+    }
+  
+}
