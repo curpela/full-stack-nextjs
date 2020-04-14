@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import "./ImagePreviewModal.scss";
 import useOnclickOutside from "react-cool-onclickoutside";
 import Slider from "react-slick";
@@ -7,15 +7,27 @@ import "slick-carousel/slick/slick-theme.css";
 import { PreviousArrow, NextArrow } from "./Arrows";
 
 interface Preview {
-  preview: string 
+  preview: string;
 }
 
 interface Props {
-  preview: any, imageModal: boolean, setImageModal: (arg0: boolean) => void, index: number, setPreview?: (argo0: any) => void, setIndex?: (argo0: any) => void
+  preview: any;
+  imageModal: boolean;
+  setImageModal: (arg0: boolean) => void;
+  index: number;
+  setPreview?: (argo0: any) => void;
+  setIndex?: (argo0: any) => void;
 }
 
-const ImagePreviewModal: React.FC<Props> = ({preview, imageModal, setImageModal, index}) => {
-  const closeModal = useOnclickOutside(() => {
+const ImagePreviewModal: React.FC<Props> = ({
+  preview,
+  imageModal,
+  setImageModal,
+  index,
+}) => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useOnclickOutside(ref, () => {
     setImageModal(false);
   });
 
@@ -29,14 +41,16 @@ const ImagePreviewModal: React.FC<Props> = ({preview, imageModal, setImageModal,
     nextArrow: <NextArrow />,
     speed: 300,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   };
 
-
   return (
-    <div key={index} className="image-preview-modal" ref={closeModal}>
+    <div key={index} className="image-preview-modal" ref={ref}>
       <div className="image-preview-modal-left">
-        <div className="image-preview-modal-image-container" style={{borderRadius: "10px", background: "black"}}>
+        <div
+          className="image-preview-modal-image-container"
+          style={{ borderRadius: "10px", background: "black" }}
+        >
           <Slider {...settings} className="image-preview-modal-slider">
             {preview.map((image?: any, i?: number) => {
               return (
@@ -44,8 +58,8 @@ const ImagePreviewModal: React.FC<Props> = ({preview, imageModal, setImageModal,
                   <img
                     src={
                       preview[imageIndex].preview
-  ? preview[imageIndex].preview
-  : preview[imageIndex]
+                        ? preview[imageIndex].preview
+                        : preview[imageIndex]
                     }
                     className="image-preview-modal-image"
                   />
@@ -81,6 +95,6 @@ const ImagePreviewModal: React.FC<Props> = ({preview, imageModal, setImageModal,
         </div> */}
     </div>
   );
-}
+};
 
 export default ImagePreviewModal;
