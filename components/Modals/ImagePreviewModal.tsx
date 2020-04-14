@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import "./ImagePreviewModal.scss";
 import useOnclickOutside from "react-cool-onclickoutside";
 import Slider from "react-slick";
@@ -27,8 +27,10 @@ const ImagePreviewModal: React.FC<Props> = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
-  useOnclickOutside(ref, () => {
-    setImageModal(false);
+  useEffect(() => {
+    useOnclickOutside(ref, () => {
+      setImageModal(false);
+    });
   });
 
   let imageIndex = index;
