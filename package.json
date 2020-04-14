@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "knex:migrate:make": "knex --knexfile src/database/knexfile.ts -x ts migrate:make",
     "knex:migrate:latest": "knex --knexfile src/database/knexfile.ts migrate:latest",
     "knex:migrate:rollback": "knex --knexfile src/database/knexfile.ts migrate:rollback"
