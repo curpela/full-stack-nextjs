@@ -22,7 +22,7 @@ exports.up = function (knex) {
       house
         .integer("photos_id")
         .references("id")
-        .inTable("photos")
+        .inTable("house_photos")
         .notNullable()
         .onDelete("cascade");
     })
