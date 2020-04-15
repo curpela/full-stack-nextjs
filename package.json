@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
-    "knex:migrate:make": "knex --knexfile src/database/knexfile.ts -x ts migrate:make",
-    "knex:migrate:latest": "knex --knexfile src/database/knexfile.ts migrate:latest",
-    "knex:migrate:rollback": "knex --knexfile src/database/knexfile.ts migrate:rollback"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",
