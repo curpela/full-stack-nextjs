@@ -35,9 +35,9 @@ exports.up = function (knex) {
         .notNullable()
         .onDelete("cascade");
       house_photos
-        .integer("house_id")
+        .integer("users_id")
         .references("id")
-        .inTable("houses")
+        .inTable("users")
         .notNullable()
         .onDelete("cascade");
       house_photos.string("high_res").notNullable();
