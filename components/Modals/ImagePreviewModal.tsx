@@ -27,11 +27,11 @@ const ImagePreviewModal: React.FC<Props> = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+
     useOnclickOutside(ref, () => {
       setImageModal(false);
     });
-  });
+
 
   let imageIndex = index;
 

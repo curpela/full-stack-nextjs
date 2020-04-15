@@ -9,14 +9,13 @@
     margin: 0 auto;
     height: 70px;
     min-height: 80px;
-    max-width: 1300px;
+    max-width: 1024px;
     align-items: center;
     display: flex;
     justify-content: space-between;
 
     .left-nav {
       width: 350px;
-      margin-left: 10%;
 
       &__word-logo {
         width: 105px;
@@ -26,7 +25,6 @@
     .right-nav {
       width: 350px;
       text-align: right;
-      margin-right: 11%;
 
       button {
         min-width: 80px;
