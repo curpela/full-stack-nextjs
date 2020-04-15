@@ -18,7 +18,8 @@ exports.up = function (knex) {
       house.string("address").notNullable();
       house.string("city").notNullable();
       house.string("state").notNullable();
-      house.string("zip_code").notNullable()
+      house.string("zip_code").notNullable();
+    })
     .createTable("house_photos", function (house_photos) {
       house_photos.increments("id").primary();
       house_photos
