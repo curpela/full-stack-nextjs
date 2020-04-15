@@ -19,6 +19,12 @@ exports.up = function (knex) {
       house.string("city").notNullable();
       house.string("state").notNullable();
       house.string("zip_code").notNullable();
+      house
+        .integer("photos_id")
+        .references("id")
+        .inTable("house_photos")
+        .notNullable()
+        .onDelete("cascade");
     })
     .createTable("house_photos", function (house_photos) {
       house_photos.increments("id").primary();
@@ -34,6 +40,8 @@ exports.up = function (knex) {
         .inTable("users")
         .notNullable()
         .onDelete("cascade");
+      house_photos.string("high_res").notNullable();
+      house_photos.string("low_res").notNullable();
       house_photos.specificType("photos", "text ARRAY").notNullable();
     });
 };
