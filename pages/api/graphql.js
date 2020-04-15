@@ -1,4 +1,10 @@
 import { ApolloServer, gql } from "apollo-server-micro";
+import Knex from "knex";
+
+const db = new Knex({
+    client: "pg",
+    connection: process.env.DATABASE_URL
+})
 
 const typeDefs = gql`
   type Query {
